@@ -14,7 +14,20 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 * Rstudio1.3.1, dplyr library, tidyverse library ggplot2 library, jsonlite library,  Github
 * Two csv data are provided [MechaCar_mpg.csv](https://www.citibikenyc.com/system-data) webpage.
 
-I am using the programming language R and its dplyr library to complete this analysis.
+## Tasks
+
+**Using Tableau we visualize in many aspect.**
+ * Determine the Number of Trips
+ * Find the Proportion of Short Term Customers to Annual Subscribers
+ * Find the Peak Riding Hours in August
+ * Find Top Starting and End Locations
+ * Find the Number of Rides by Gender
+ * Find the Average Trip Duration by Age
+ * Determine the Bikes Due for Repair
+ * Determine Bike Utilization
+ * Few tasks are summurized in the following dashboard.
+
+https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/MechaCarChallenge.html
 
 ## Linear Regression to Predict MPG
 
