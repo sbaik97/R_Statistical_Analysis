@@ -1,0 +1,39 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+# Deliverable 2: The suspension coil summary statistics
+
+### 
+```{r}
+suspension_coil <- read.csv(file="C:/Users/jeja9/Bootcamp/Week15_R/R_Statistical_Analysis/MechaCar_Stat.Analysis/resources/Suspension_Coil.csv", stringsAsFactors = F)
+head(suspension_coil)
+```
+###  total_summary dataframe
+```{r}
+Total_summary <- suspension_coil %>%         
+                  summarize(Mean=mean(PSI), 
+                              Median=median(PSI), 
+                              Variance=var(PSI),
+                              SD=sd(PSI))
+Total_summary
+```
+
+
+### lot_summary dataframe
+```{r}
+lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot)  %>%            
+                 summarize(Mean=mean(PSI), 
+                              Median=median(PSI), 
+                              Variance=var(PSI),
+                              SD=sd(PSI), .groups = 'keep')
+lot_summary
+```
+

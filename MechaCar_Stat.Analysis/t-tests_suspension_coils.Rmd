@@ -1,0 +1,34 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+# Deliverable 3: T-Tests on Suspension Coils
+
+### 
+```{r}
+suspension_coil <- read.csv(file="C:/Users/jeja9/Bootcamp/Week15_R/R_Statistical_Analysis/MechaCar_Stat.Analysis/resources/Suspension_Coil.csv", stringsAsFactors = F)
+```
+
+### t-test forall manufacturing lots
+```{r}
+# t-test that compares all manufacturing lots against mean PSI of the population
+# One sample t-test;;
+t.test(suspension_coil$PSI, mu=mean(suspension_coil$PSI))
+
+```
+### Three t-tests that compare each manufacturing lot against mean PSI of the population
+```{r}
+table_Lot1 <- subset(suspension_coil, Manufacturing_Lot == "Lot1")
+t.test(table_Lot1$PSI, mu=mean(table_Lot1$PSI))#compare the mean difference
+table_Lot2 <- subset(suspension_coil, Manufacturing_Lot == "Lot2")
+t.test(table_Lot2$PSI, mu=mean(table_Lot2$PSI))#compare the mean difference
+table_Lot3 <- subset(suspension_coil, Manufacturing_Lot == "Lot3")
+t.test(table_Lot3$PSI, mu=mean(table_Lot3$PSI))#compare the mean difference
+```

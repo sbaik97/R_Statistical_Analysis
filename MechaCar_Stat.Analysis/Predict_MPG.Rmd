@@ -1,0 +1,195 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+# Deliverable 1: Linear Regression to Predict MPG
+```{r}
+MechaCar_mpg <- read.csv(file="Resources/MechaCar_mpg.csv")
+head(MechaCar_mpg)
+```
+
+# Multiple linear Regression
+```{r}
+
+mpg_lm <-lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD + mpg, MechaCar_mpg) 
+# summarize linear regression
+summary(mpg_lm ) 
+```
+# Linear Regression for each vaiable
+
+
+### Function to create the text equation
+```{r}
+lm_eqn <- function(df, lm_object) {
+  eq <-
+    substitute(
+      italic(y) == a %.%italic(x) + b * ","  ~ italic(r) ^ 2 ~ "=" ~ r2 * ","  ~ italic(p.) ~ "=" ~ p,
+      list(
+        a = format (summary(lm_object)$coefficients[2,1], digits =3),
+        b = format (summary(lm_object)$coefficients[1,1], digits =3),
+        r2 = format (summary(lm_object)$r.squared, digits =3),
+        p = format (summary(lm_object)$coefficients[2,4], digits =3)
+        )
+    )
+  as.character(as.expression(eq))
+}
+```
+
+
+### vehicle_length vs mpg
+```{r}
+model <- lm(mpg ~ vehicle_length, data=MechaCar_mpg)
+summary(model)
+
+```
+```{r}
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$vehicle_length + model$coefficients[1]
+# get the equation object in a format for use in ggplot2
+eqn <- lm_eqn(MechaCar_mpg$vehicle_length, model)
+
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=vehicle_length,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") +
+annotate("text", x = 14, y = 78, label = eqn, parse = TRUE)
+```
+
+
+### vehicle_weight vs mpg
+```{r}
+model <- lm(mpg ~ vehicle_weight, data=MechaCar_mpg)
+summary(model)
+```
+
+```{r}
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$vehicle_weight + model$coefficients[1] 
+# get the equation object in a format for use in ggplot2
+eqn <- lm_eqn(MechaCar_mpg$vehicle_weight, model)
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=vehicle_weight,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") +
+annotate("text", x = 4000, y = 78, label = eqn, parse = TRUE)
+```
+
+### spoiler_angle vs mpg
+```{r}
+model <- lm(mpg ~ spoiler_angle, data=MechaCar_mpg)
+summary(model)
+```
+```{r}
+# get the equation object in a format for use in ggplot2
+eqn <- lm_eqn(MechaCar_mpg$spoiler_angle, model)
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$spoiler_angle + model$coefficients[1] 
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=spoiler_angle,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") +
+annotate("text", x = 30, y = 78, label = eqn, parse = TRUE)
+```
+
+
+### ground_clearance vs mpg
+```{r}
+model <- lm(mpg ~ ground_clearance, data=MechaCar_mpg)
+summary(model)
+
+```
+```{r}
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$ground_clearance + model$coefficients[1]
+# get the equation object in a format for use in ggplot2
+eqn <- lm_eqn(MechaCar_mpg$ground_clearance, model)
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=ground_clearance,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") +
+annotate("text", x = 10, y = 78, label = eqn, parse = TRUE)
+```
+
+
+### AWD vs mpg
+```{r}
+model <- lm(mpg ~ AWD, data=MechaCar_mpg)
+summary(model)
+```
+```{r}
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$AWD + model$coefficients[1]
+# get the equation object in a format for use in ggplot2
+eqn <- lm_eqn(MechaCar_mpg$AWD, model)
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=AWD,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") +
+annotate("text", x = 0.5, y = 78, label = eqn, parse = TRUE)
+```
+
+
+### mpg vs mpg
+```{r}
+model <- lm(mpg ~ mpg, data=MechaCar_mpg)
+summary(model)
+
+```
+```{r}
+#determine y-axis values from linear model
+yvals <- model$coefficients[2]*MechaCar_mpg$mpg + model$coefficients[1] 
+# plot with text
+plt <- ggplot(MechaCar_mpg,aes(x=mpg,y=mpg)) #import dataset into ggplot2
+plt + geom_point() + geom_line(aes(y=yvals), color = "red") 
+```
+
+
+
+# Deliverable 2: The suspension coil summary statistics
+
+### 
+```{r}
+suspension_coil <- read.csv(file="Resources/Suspension_Coil.csv", stringsAsFactors = F)
+head(suspension_coil)
+```
+###  total_summary dataframe
+```{r}
+Total_summary <- suspension_coil %>%         
+                  summarize(Mean=mean(PSI), 
+                              Median=median(PSI), 
+                              Variance=var(PSI),
+                              SD=sd(PSI))
+Total_summary
+```
+
+
+### lot_summary dataframe
+```{r}
+lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot)  %>%            
+                 summarize(Mean=mean(PSI), 
+                              Median=median(PSI), 
+                              Variance=var(PSI),
+                              SD=sd(PSI), .groups = 'keep')
+lot_summary
+```
+
+# Deliverable 3: T-Tests on Suspension Coils
+
+### t-test forall manufacturing lots
+```{r}
+# t-test that compares all manufacturing lots against mean PSI of the population
+# One sample t-test;;
+t.test(suspension_coil$PSI, mu=mean(suspension_coil$PSI))
+
+```
+### Three t-tests that compare each manufacturing lot against mean PSI of the population
+```{r}
+table_Lot1 <- subset(suspension_coil, Manufacturing_Lot == "Lot1")
+t.test(table_Lot1$PSI, mu=mean(table_Lot1$PSI))#compare the mean difference
+table_Lot2 <- subset(suspension_coil, Manufacturing_Lot == "Lot2")
+t.test(table_Lot2$PSI, mu=mean(table_Lot2$PSI))#compare the mean difference
+table_Lot3 <- subset(suspension_coil, Manufacturing_Lot == "Lot3")
+t.test(table_Lot3$PSI, mu=mean(table_Lot3$PSI))#compare the mean difference
+```
