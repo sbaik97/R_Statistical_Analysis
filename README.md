@@ -44,13 +44,13 @@ In this section, I loaded in the miles per gallon dataset. From there, I preform
 2. Is the slope of the linear model considered to be zero? Why or why not?
 3. Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
-Here are the summary results from the linear regression.
+**Summary results from the linear regression**
 
-**Miles Per Gallon Linear Regression**
+ * Miles Per Gallon Linear Regression
 
 ![MPG_Linear_Regression_Analysis](MechaCar_Stat.Analysis/figure-html/MPG_Linear_Regression.png)
 
-**Html link:**
+ * Html link:
 
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/Predict_MPG.html
 
@@ -66,22 +66,25 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 
 In this section, I loaded in the suspension coils dataset. It  was comprised of 150 different vehicles ID, 3 different lot numbers, and corresponding PSI levels for each vehicle. From there I created two summary tables to look at the mean, median, variance, and standard deviation of data. The first table looked at of the data as a whole, while the second table looked specific at each of the three different lots that the MechaCars were divided into. Here are the two tables.
 
-**Total Summary Table**
+**A question is:**
+1. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+
+**Summary results from the linear regression**
+ * Total Summary Table
 
 ![Total_Summary_Statistics](MechaCar_Stat.Analysis/figure-html/Total_summary.png)
 
-**Lot Summary Table**
+ * Lot Summary Table
 
 ![lot_Summary_Statistics](MechaCar_Stat.Analysis/figure-html/lot_summary.png)
 
-**Html link:**
+ * Html link:
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/Suspension_coil_stastics.html
 
 **By completing this analysis I want to answer one question:**
 
-1. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
-The answer to this question is:
+**The answer is:**
 
 1. Looking at the total summary, the current variance is approximately 76.23 PSI meaning that is does meet the design specification. When looking at the lots individuals, the first two lotas meet the design specification at a varaince of approximately 1.14 PSI and 10.13 PSI respectfully, but the third lot does not. This is becasue the third lot's variance is approximately 220.01 PSI, exceeding the design specification by more than double the alotted amount. Therefore, the manufacturing team should work with the cars in lots 1 and 2 compared to those in lot 3.
 
@@ -89,31 +92,31 @@ The answer to this question is:
 
 In this section, I wanted to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch. In order to do this, I used R's t.test() function to find four different p-values. 
 
-**The question that I wanted to answer by doing this was:**
+**A question is:**
 
 1. Do any of the four groups have a statistically different mean from the population mena of 1,500 PSI?
 
-**t-test for All Three Combined Lot**
+**Here is a breakdown of each of the four tests:**
+ * t-test for All Three Combined Lot
 
 ![t-test For All Manufacturing](MechaCar_Stat.Analysis/figure-html/t-test_all_manufacturing_lots.png)
 
-**t-test for Each Lot**
+ * t-test for Each Lot
 
 ![t-test For All Manufacturing](MechaCar_Stat.Analysis/figure-html/t-tests_each_lot.png)
 
-**Html link:**
+ * Html link:
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/t-tests_suspension_coils.html
 
-**The answer to this question is:**
+**The answer is:**
 
 1. By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the four groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all four p-values where much greater than .05 meaning that I would fail to reject that there is a statistical difference between the four groups and the population mean.
 
-Here is a breakdown of each of the four tests:
 
 
 ### 4. Study Design: MechaCar vs Competition
 
-In this section, I am comparing how the MechaCar performs with the competition. I am not preforming any tests in R, I am talking about how I would go about completing this analysis. In order to do this I want to answer four different questions which are:
+Using your knowledge of R, design a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers.
 
 1. What metric or metrics are you going to test?
 2. What is the null hypothesis or alternative hypothesis?
