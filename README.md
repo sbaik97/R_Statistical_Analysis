@@ -29,7 +29,7 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 * Determine the most appropriate statistical test for a given hypothesis and dataset.
 
 
-* The boxplots by fuel-efficiency type to make comparisons across manufacturers
+**The example of boxplots by fuel-efficiency type to make comparisons across manufacturers**
 
 ![Boxplots_By_Fuel-Effciency_Type](Practice/image/facet_lab(vars(MPG_Type)).png)
 
