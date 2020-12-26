@@ -124,11 +124,12 @@ mpg_summary <- mpg %>% group_by(class) %>%
 summarize(Mean_Engine=mean(displ),SD_Engine=sd(displ), .groups = 'keep')
 plt <- ggplot(mpg_summary,aes(x=class,y=Mean_Engine)) #import dataset into ggplot2
 plt + geom_point(size=4) + labs(x="Vehicle Class",y="Mean Engine Size") + #add scatter plot with labels
-geom_errorbar(aes(ymin=Mean_Engine-SD_Engine,ymax=Mean_Engine+SD_Engine)) #overlay with error
-bars
+geom_errorbar(aes(ymin=Mean_Engine-SD_Engine,ymax=Mean_Engine+SD_Engine)) #overlay with error bars
 ```
-#visualize the different vehicle fuel e􀂨ciency ratings by manufacturer
+#visualize the different vehicle fuel effciency ratings by manufacturer
 ```{r}
+mpg_long <- mpg %>% gather(key="MPG_Type",value="Rating",c(cty,hwy)) #conve
+head(mpg_long)
 plt <- ggplot(mpg_long,aes(x=manufacturer,y=Rating,color=MPG_Type)) #import
 plt + geom_boxplot() + theme(axis.text.x=element_text(angle=45,hjust=1)) #
 ```
@@ -174,7 +175,7 @@ t.test(log10(sample_table$Miles_Driven),log10(sample_table2$Miles_Driven))
 ```
 # pair t-test
 ```{r}
-population_table <- read.csv(file='Resources/mpg_modified.csv',check.names = F,stringsAsFactors = F) #import used car dataset
+mpg_data <- read.csv(file='Resources/mpg_modified.csv',check.names = F,stringsAsFactors = F) #import used car dataset
 mpg_1999 <- mpg_data %>% filter(year==1999) #select only data points where the year is 1999
 mpg_2008 <- mpg_data %>% filter(year==2008) #select only data points where the year is 2008
 t.test(mpg_1999$hwy,mpg_2008$hwy,paired = T) #compare the mean difference
