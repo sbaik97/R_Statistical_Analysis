@@ -35,14 +35,7 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 
 ### 1. Linear Regression to Predict MPG
 
-
-In this section, I loaded in the miles per gallon dataset. From there, I preformed a multiple linear regression to see if it could predict the miles per gallon (mpg) dependent variable by using the vehicle length, vehicle weight, spoiler angle, ground clearance, and all wheel drive (AWD) independent variables. 
-
-**Three questions:**
-
-1. Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-2. Is the slope of the linear model considered to be zero? Why or why not?
-3. Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars,produced using multiple design specifications to identify ideal vehicle performance. Herein, I designed a linear model that predicts the mpg of MechaCar prototypes using the multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain,and ground clearance, using myknowledge of R.  
 
 **Summary results from the linear regression**
 
@@ -54,11 +47,21 @@ In this section, I loaded in the miles per gallon dataset. From there, I preform
 
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/Predict_MPG.html
 
-**The answers to these questions are:**
+**Three questions:**
 
-1. There were two variables that provided a non-random amount of variance: The vehicle length and the ground_clearance. Both of these have extremely small p-value meaning that they had a high level of significance. It also should be noted that the intercept as had a high level of significance meaning that there are still other factors contributing to the variance of the miles per gallon of the MechaCar. 
-2. The slope of the linear model is not considered to be zero. This is because the linear regression shows that some of the independent variables had a significant effect on the dependent variable. If none of the independent variables had an effect on the dependent variable then the linear regression would result in a near zero slope. 
-3. The main indicator of whether the linear model predicts the mpg of the MechaCar is the r-squared value. In this case, it is at 0.7149 mean that out of 100 instances, this model would approximately predict the mpg of the MechaCar correctly 71 times. This means that the model would be considered effective.
+1. Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
+ *R:  Two variables, vehicle length and the ground_clearance, provide a non-random amount of variance. Both of these have extremely small p-value (less than 0.05 %), meaning that they had a high level of significance.  
+ 
+2. Is the slope of the linear model considered to be zero? Why or why not?
+
+ *R: The slope of the multiple linear regression model is not considered to be zero. A multiple linear regression uses multiple independent
+variables to account for parts of the total variance observed in the dependent variable. 
+This is because the linear regression shows that some of the independent variables had a significant effect on the dependent variable. If none of the independent variables had an effect on the dependent variable then the linear regression would result in a near zero slope. 
+ 
+3. Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
+ *R: The main indicator of whether the linear model predicts the mpg of the MechaCar is the r-squared value. In this case, it is at 0.7149 mean that out of 100 instances, this model would approximately predict the mpg of the MechaCar correctly 71 times. This means that the model would be considered effective.
 
 
 
@@ -66,10 +69,8 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 
 In this section, I loaded in the suspension coils dataset. It  was comprised of 150 different vehicles ID, 3 different lot numbers, and corresponding PSI levels for each vehicle. From there I created two summary tables to look at the mean, median, variance, and standard deviation of data. The first table looked at of the data as a whole, while the second table looked specific at each of the three different lots that the MechaCars were divided into. Here are the two tables.
 
-**A question is:**
-1. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
-**Summary results from the linear regression**
+**Results from the Suspension Coils's statitstics**
  * Total Summary Table
 
 ![Total_Summary_Statistics](MechaCar_Stat.Analysis/figure-html/Total_summary.png)
@@ -81,8 +82,6 @@ In this section, I loaded in the suspension coils dataset. It  was comprised of 
  * Html link:
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/Suspension_coil_stastics.html
 
-**By completing this analysis I want to answer one question:**
-
 
 **The answer is:**
 
@@ -92,11 +91,8 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 
 In this section, I wanted to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch. In order to do this, I used R's t.test() function to find four different p-values. 
 
-**A question is:**
 
-1. Do any of the four groups have a statistically different mean from the population mena of 1,500 PSI?
-
-**Here is a breakdown of each of the four tests:**
+**Results from the t-Tests on Suspension Coils**
  * t-test for All Three Combined Lot
 
 ![t-test For All Manufacturing](MechaCar_Stat.Analysis/figure-html/t-test_all_manufacturing_lots.png)
@@ -108,10 +104,12 @@ In this section, I wanted to determine if all manufacturing lots and each lot in
  * Html link:
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/t-tests_suspension_coils.html
 
-**The answer is:**
 
-1. By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the four groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all four p-values where much greater than .05 meaning that I would fail to reject that there is a statistical difference between the four groups and the population mean.
+**A question is:**
 
+1. Do any of the four groups have a statistically different mean from the population mena of 1,500 PSI?
+
+*R: By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the four groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all four p-values where much greater than .05 meaning that I would fail to reject that there is a statistical difference between the four groups and the population mean.
 
 
 ### 4. Study Design: MechaCar vs Competition
