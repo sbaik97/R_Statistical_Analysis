@@ -124,16 +124,17 @@ Design a new statistical study to compare performance of the MechaCar vehicles a
 from other manufacturers, using your knowledge of R.
 
 1. What metric or metrics are you going to test?
- * Repy: The metrics I want to test are the fuel efficiencies of gasolin and hibrid cars.
+ * Repy: The metrics I want to test are the fuel efficiencies of gasolin and hybrid cars.
  
 2. What is the null hypothesis or alternative hypothesis?
- * Repy: Null Hypothesis is that all of the cars in the same class have the same fuel efficienies. THe Alternative Hypothesis is that they are not all the same.
+ * Repy: Null Hypothesis is that all of the cars in the same class have the same fuel efficienies (Ho), which is generally the
+hypothesis that can be explained by random chance. THe Alternative Hypothesis is that they are not all the same (Ha), which is influencd by non-random events.
  
 3. What statistical test would you use to test the hypothesis? And why?
- * Repy: I would use an ANOVA test to complete this analysis for both types of fuel efficiencies. Also I would use the ggplot2 library to show the potential spread between different cars using a boxplot.
+ * Repy: I would use a t-test to complete this analysis for both types of car for the fuel efficiencies comparision. Also I would use the box plot in the ggplot2 library to show the potential spread of fuel effience.There are also different cartegory of car (types of car) within the two gasoline and hybrid cars. In this case we need to expend it to ANOVA test to compare the means of a continuous numerical variable across a number of groups.
 
 4. What data is needed to run the statistical test?
- * Repy: I would need fuel efficiency data from 50 individual cars to create a sample size of data for each car in the same class type. For example, if there was 10 cars in the class type, I would have a top of 500 data points collected for each fuel efficiency type.
+ * Repy: I would need fuel efficiency data from 50 individual cars in the same class type to create a sample size of data for each car. The sample data distribution should be similar to its population data distribution and each sample size should reasonably large to get a significant level of statistics between two cartegories. 
 
 
 
