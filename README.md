@@ -28,6 +28,11 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 * Identify key characteristics of A/B and A/A testing.
 * Determine the most appropriate statistical test for a given hypothesis and dataset.
 
+ * The boxplots by fuel-efficiency type to make comparisons across manufacturers
+
+![Boxplots_By_Fuel-Effciency_Type](Practice/image/facet_lab(vars(MPG_Type)).png)
+
+
 **Html link:**
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/MechaCarChallenge.html
 
