@@ -17,19 +17,23 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 ## Tasks
 
 **Using Tableau we visualize in many aspect.**
- * Determine the Number of Trips
- * Find the Proportion of Short Term Customers to Annual Subscribers
- * Find the Peak Riding Hours in August
- * Find Top Starting and End Locations
- * Find the Number of Rides by Gender
- * Find the Average Trip Duration by Age
- * Determine the Bikes Due for Repair
- * Determine Bike Utilization
- * Few tasks are summurized in the following dashboard.
+* Load, clean up, and reshape datasets using tidyverse in R.
+* Visualize datasets with basic plots such as line, bar, and scatter plots using ggplot2.
+* Generate and interpret more complex plots such as boxplots and heatmaps using ggplot2.
+* Plot and identify distribution characteristics of a given dataset.
+* Formulate null and alternative hypothesis tests for a given data problem.
+* Implement and evaluate simple linear regression and multiple linear regression models for a given dataset.
+* Implement and evaluate the one-sample t-Tests, two-sample t-Tests, and analysis of variance (ANOVA) models for a given dataset.
+* Implement and evaluate a chi-squared test for a given dataset.
+* Identify key characteristics of A/B and A/A testing.
+* Determine the most appropriate statistical test for a given hypothesis and dataset.
 
+* R markdown file 
 https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/MechaCarChallenge.html
 
-## Linear Regression to Predict MPG
+## Challenges
+
+### Linear Regression to Predict MPG
 
 In this section, I loaded in the miles per gallon dataset. From there, I preformed a multiple linear regression to see if it could predict the miles per gallon (mpg) dependent variable by using the vehicle length, vehicle weight, spoiler angle, ground clearance, and all wheel drive (AWD) independent variables. By doing this, I wanted to answer three questions:
 
@@ -69,7 +73,7 @@ The answer to this question is:
 
 1. Looking at the total summary, the current variance is approximately 76.23 PSI meaning that is does meet the design specification. When looking at the lots individuals, the first two lotas meet the design specification at a varaince of approximately 1.14 PSI and 10.13 PSI respectfully, but the third lot does not. This is becasue the third lot's variance is approximately 220.01 PSI, exceeding the design specification by more than double the alotted amount. Therefore, the manufacturing team should work with the cars in lots 1 and 2 compared to those in lot 3.
 
-## T-Tests on Suspension Coils
+###  T-Tests on Suspension Coils
 
 In this section, I wanted to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch. In order to do this, I used R's t.test() function to find four different p-values. The question that I wanted to answer by doing this was:
 
@@ -97,7 +101,7 @@ Here is a breakdown of each of the four tests:
 
 ![3_pop_test](https://github.com/Wall-E28/mecha_car_statistical_analysis/blob/main/visualizations/3_pop_test.png)
 
-## Study Design: MechaCar vs Competition
+### Study Design: MechaCar vs Competition
 
 In this section, I am comparing how the MechaCar performs with the competition. I am not preforming any tests in R, I am talking about how I would go about completing this analysis. In order to do this I want to answer four different questions which are:
 
