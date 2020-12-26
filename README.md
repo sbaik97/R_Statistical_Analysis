@@ -10,6 +10,10 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 3. Run t-tests to determine if the manufacturing lots are statistically different from the mean population
 4. Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, we’ll write a summary interpretation of the findings.
 
+## Software/Tools
+* Rstudio1.3.1, dplyr library, tidyverse library ggplot2 library, jsonlite library,  Github
+* Two csv data are provided [MechaCar_mpg.csv](https://www.citibikenyc.com/system-data) webpage.
+
 I am using the programming language R and its dplyr library to complete this analysis.
 
 ## Linear Regression to Predict MPG
