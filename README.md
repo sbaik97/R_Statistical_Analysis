@@ -107,18 +107,18 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 
 
 **Summary**
+1. The t-test is the basic and popular statistical tests and the one-sample t-test is used to determine whether there is a statistical difference between the means of a sample dataset and a hypothesized, potential population dataset. Herein we performed the t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds PSI.
 
-1. Do any of the four groups have a statistically different mean from the population mena of 1,500 PSI?
-
- * Repy: By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the four groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all four p-values where much greater than .05 meaning that I would fail to reject that there is a statistical difference between the four groups and the population mean.
+2. By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all and each of three lots has the larger p- than 0.05. In the case the p-value is lower than the significance level, we would have sufficient evidence to reject the null hypothesis and state that the mean of all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI.
 
 
 ### 4. Study Design: MechaCar vs Competition
 
-Using your knowledge of R, design a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers.
+Design a new statistical study to compare performance of the MechaCar vehicles against performance of vehicles
+from other manufacturers, using your knowledge of R.
 
 1. What metric or metrics are you going to test?
- * Repy: The metrics I want to test are city and highway fuel efficiencies.
+ * Repy: The metrics I want to test are the fuel efficiencies of gasolin and hibrid cars.
  
 2. What is the null hypothesis or alternative hypothesis?
  * Repy: Null Hypothesis is that all of the cars in the same class have the same fuel efficienies. THe Alternative Hypothesis is that they are not all the same.
@@ -126,9 +126,8 @@ Using your knowledge of R, design a statistical study to compare performance of 
 3. What statistical test would you use to test the hypothesis? And why?
  * Repy: I would use an ANOVA test to complete this analysis for both types of fuel efficiencies. Also I would use the ggplot2 library to show the potential spread between different cars using a boxplot.
 
-
 4. What data is needed to run the statistical test?
- * Repy: I would need fuel efficiency data from 50 individual cars to create a sample size of data for each car in the class type. For example, if there was 10 cars in the class type, I would have a top of 500 data points collected for each fuel efficiency type.
+ * Repy: I would need fuel efficiency data from 50 individual cars to create a sample size of data for each car in the same class type. For example, if there was 10 cars in the class type, I would have a top of 500 data points collected for each fuel efficiency type.
 
 
 
