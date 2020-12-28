@@ -35,7 +35,7 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 
 
 **Html link:**
-https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/MechaCar_Stat.Analysis/MechaCarChallenge.html
+https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis/blob/main/Practice/practice.html
 
 ## Challenges
 
