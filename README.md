@@ -128,7 +128,7 @@ from other manufacturers, using your knowledge of R.
  
 2. What is the null hypothesis or alternative hypothesis?
  * Repy: Null Hypothesis is that all of the cars in the same class have the same fuel efficienies (Ho), which is generally the
-hypothesis that can be explained by random chance. THe Alternative Hypothesis is that they are not all the same (Ha), which is influencd by non-random events.
+hypothesis that can be explained by random chance. THe Alternative hypothesis is that they are not all the same (Ha), which is influencd by non-random events.
  
 3. What statistical test would you use to test the hypothesis? And why?
  * Repy: I would use a t-test to complete this analysis for both types of car for the fuel efficiencies comparision. Also I would use the box plot in the ggplot2 library to show the potential spread of fuel effience.There are also different cartegory of car (types of car) within the two gasoline and hybrid cars. In this case we need to expend it to ANOVA test to compare the means of a continuous numerical variable across a number of groups.
