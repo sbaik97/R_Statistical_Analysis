@@ -115,7 +115,7 @@ https://htmlpreview.github.io/?https://github.com/sbaik97/R_Statistical_Analysis
 **Summary**
 1. The t-test is the basic and popular statistical tests and the one-sample t-test is used to determine whether there is a statistical difference between the means of a sample dataset and a hypothesized, potential population dataset. Herein we performed the t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds PSI.
 
-2. By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all and each of three lots has the larger p- than 0.05. In the case the p-value is lower than the significance level, we would have sufficient evidence to reject the null hypothesis and state that the mean of all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI.
+2. By using a significance level of 95%, meaning that 95% of the time this tests results would be true, I tested to see if any of the groups had a statistical difference from the mean of 1,500 PSI. After running the tests, all and each of three lots has the larger p- than 0.05. In the case the p-value is larger than the significance level, we would have sufficient evidence to reject the null hypothesis and state that the mean of all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI.
 
 
 ### 4. Study Design: MechaCar vs Competition
@@ -131,7 +131,7 @@ from other manufacturers, using your knowledge of R.
 hypothesis that can be explained by random chance. THe Alternative hypothesis is that they are not all the same (Ha), which is influencd by non-random events.
  
 3. What statistical test would you use to test the hypothesis? And why?
- * Repy: I would use a t-test to complete this analysis for both types of car for the fuel efficiencies comparision. Also I would use the box plot in the ggplot2 library to show the potential spread of fuel effience.There are also different cartegory of car (types of car) within the two gasoline and hybrid cars. In this case we need to expend it to ANOVA test to compare the means of a continuous numerical variable across a number of groups.
+ * Repy: I would use a t-test to complete the analysis for both types of car for the fuel efficiencies comparison. Also I would use the box plot in the ggplot2 library to show the potential spread of fuel effience.There are also different cartegory of car (types of car) within the two gasoline and hybrid cars. In this case we need to expend it to ANOVA test to compare the means of a continuous numerical variable across a number of groups.
 
 4. What data is needed to run the statistical test?
  * Repy: I would need fuel efficiency data from 50 individual cars in the same class type to create a sample size of data for each car. The sample data distribution should be similar to its population data distribution and each sample size should reasonably large to get a significant level of statistics between two cartegories. 
