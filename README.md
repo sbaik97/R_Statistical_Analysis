@@ -69,7 +69,7 @@ that each coefficient contributes a random amount of variance to the linear mode
  * Repy: The main indicator of whether the linear model predicts the mpg of the MechaCar is the r-squared value. According to the summary output, the r-squared value has increased from 0.37 in the simple linear regression model to 0.71 in the multiple linear regression model while the p-value remained significant. This means that the multiple linear regression model would be considered effective than the simple linear regression model.
 
 
-## 2. Summary Statistics on Suspension Coils
+### 2. Summary Statistics on Suspension Coils
 
 The MechaCar Suspension_Coil dataset contains the pounds per square inch (PSI) results from multiple production lots by tesing the weight capacities of multiple suspension coils. Herein, I created two summary tables to look at the mean, median, variance, and standard deviation of data to determine if the manufacturing process is consistent across production lots. The first table looked at the all data across all manufacturing lots, while the second table looked the statistics at each of the three lots that the MechaCars were divided into. 
 
